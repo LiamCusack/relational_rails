@@ -10,29 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_12_02_214216) do
-=======
-ActiveRecord::Schema.define(version: 2020_12_02_213554) do
->>>>>>> 8670526886177b9c31004f6340fef19ad7863cca
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "networks", force: :cascade do |t|
-    t.string "name"
-    t.datetime "established"
-    t.integer "num_of_shows"
-  end
-
-  create_table "shows", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer "network_id"
-    t.boolean "daytime_show"
-=======
   create_table "dishes", force: :cascade do |t|
     t.string "name"
     t.boolean "spicy"
@@ -43,13 +25,21 @@ ActiveRecord::Schema.define(version: 2020_12_02_213554) do
   create_table "networks", force: :cascade do |t|
     t.string "name"
     t.datetime "established"
+    t.integer "num_of_shows"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.datetime "date_opened"
     t.string "style"
->>>>>>> 8670526886177b9c31004f6340fef19ad7863cca
+  end
+
+  create_table "shows", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "network_id"
+    t.boolean "daytime_show"
   end
 
 end
