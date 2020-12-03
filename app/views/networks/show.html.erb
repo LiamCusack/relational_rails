@@ -1,0 +1,13 @@
+<a href="/networks">networkindex</a>
+
+<h1><%= @network.name %></h1>
+<p><%= @network.established %></p>
+<p><%= @network.num_of_shows %></p>
+
+<a href="/networks/<%= @network.id %>/edit"> Update Network</a>
+<br/>
+<form action='/networks/<%= @network.id %>' method='POST'>
+<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+<input type='hidden' name='_method' value='DELETE'>
+<input type='submit' value='delete'/>
+</form>

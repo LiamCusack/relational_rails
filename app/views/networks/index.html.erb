@@ -1,1 +1,9 @@
-<%= @networks %>
+<h1>All Networks</h1>
+
+<a href="/">home</a>
+
+<% @networks.each do |network| %>
+  <h3><a href="/networks/<%= network.id %>"><%= network.name %></a></h3>
+  <% end %>
+
+<a href="/networks/new">new network</a>
