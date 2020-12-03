@@ -1,9 +1,12 @@
 <form action="/networks" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>Enter a new network:</p>
-  <input type='text' name='network[name]'/><br/>
-  <input type='datetime' name='network[established]'/><br/>
-  <input type='integer' name='network[num_of_schools]'/><br/>
+  <label for="network_name">Network Name:</label><br>
+  <input type='text' id='network_name' name='network[name]'/><br/>
+  <label for="date_est">Date Established:</label><br>
+  <input type='datetime' id='date_est' name='network[established]'/><br/>
+  <label for="num_shows">Num of Shows:</label><br>
+  <input type='integer' id='num_shows' name='network[num_of_schools]'/><br/>
   <input type='submit'/>
 </form>
 
