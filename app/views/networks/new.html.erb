@@ -1,9 +1,11 @@
-<form action="/networks/<%= @network.id %>" method="post">
+<form action="/networks" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Edit</p>
-  <input type='text' name='network[name]' value="<%= @network.name %>"/><br/>
-  <input type='datetime' name='network[established]' value="<%= @network.established %>"/><br/>
-  <input type='integer' name='network[num_of_shows]' value="<%= @network.num_of_shows %>"/><br/>
+  <p>Enter a new network:</p>
+  <input type='text' name='network[name]'/><br/>
+  <input type='datetime' name='network[established]'/><br/>
+  <input type='integer' name='network[num_of_schools]'/><br/>
   <input type='submit'/>
 </form>
+
+
+

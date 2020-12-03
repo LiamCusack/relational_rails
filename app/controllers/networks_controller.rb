@@ -20,7 +20,7 @@ class NetworksController < ApplicationController
     redirect_to '/networks'
   end
 
-  def show
-    @network = Network.find(params[:id])
-  end
+  # def show
+  #   @network = Network.find(params[:id])
+  # end
 end
