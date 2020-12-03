@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get '/networks/new', to: 'networks#new'
   post '/networks', to: 'networks#create'
   get '/networks/:id', to: 'networks#show'
+  get '/networks/:id/edit', to: 'networks#edit'
+  patch '/networks/:id', to: 'networks#update'
+  delete '/networks/:id', to: 'networks#destroy'
 end
