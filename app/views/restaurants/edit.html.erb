@@ -1,0 +1,9 @@
+<form action="/restaurants/<%= @restaurant.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <input type="text" name="restaurant[name]" value="<%= @restaurant.name %>"/><br/>
+  <input type="datetime" name="restaurant[date_opened]" value="<%= @restaurant.date_opened %>"/><br/>
+  <input type="text" name="restaurant[style]" value="<%= @restaurant.style %>"/><br/>
+  <input type="submit"/>
+</form>
