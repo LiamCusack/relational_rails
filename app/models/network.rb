@@ -1,3 +1,3 @@
 class Network < ApplicationRecord
-  
+
 end
