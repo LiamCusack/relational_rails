@@ -23,7 +23,7 @@ describe 'When I click the New Restaurant link' do
       fill_in "Restaurant Name:", with: "Cosmo's"
       fill_in "Date Opened:", with: "2222-02-02 22:22:22"
       fill_in "Style:", with: "Pizza"
-      click_button
+      click_button("Create Restaurant")
     end
   end
 end
