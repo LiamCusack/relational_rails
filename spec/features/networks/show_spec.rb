@@ -48,6 +48,12 @@ describe 'As a visitor' do
       visit "/networks/#{@netflix.id}"
 
       expect(page).to have_link('Delete')
+
+      visit "/restaurants"
+
+      expect(page).to_not have_content("#{@netflix.name}")
+      expect(page).to_not have_content("#{@netflix.established}")
+      expect(page).to_not have_content("#{@netflix.num_of_shows}")
     end
   end  
 end

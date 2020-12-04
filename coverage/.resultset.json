@@ -343,6 +343,12 @@
           null,
           1,
           null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -415,8 +421,62 @@
           1,
           null
         ]
+      },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/controllers/restaurants_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/models/restaurant.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1607089605
+    "timestamp": 1607089969
   }
 }
