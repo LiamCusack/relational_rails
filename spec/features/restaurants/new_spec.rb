@@ -16,7 +16,7 @@ describe 'When I click the New Restaurant link' do
 
       end
 
-    it 'I fill in the forms for a new restaurant record and click submit' do
+    it 'I fill in the forms for a new restaurant record and click submit then a post request is sent to the /restaurant route, a new restaurant record is created, and I am redirected to the index page when I see the new restaurant' do
 
       visit '/restaurants/new'
 

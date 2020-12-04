@@ -23,5 +23,28 @@ describe 'As a visitor' do
       expect(page).to have_content("#{@fazoli.date_opened}")
       expect(page).to have_content("#{@fazoli.style}")
     end
+
+    it 'Then I see a "update restaurant" link to update the restaurant' do
+      visit "/restaurants/#{@fazoli.id}"
+
+      expect(page).to have_link('Update Restaurant')
+
+      click_link("Update Restaurant")
+
+      visit "/restaurants/#{@fazoli.id}/edit"
+
+      fill_in "Restaurant Name:", with: "Cosmo's"
+      fill_in "Date Opened:", with: "2222-02-02 22:22:22"
+      fill_in "Style:", with: "Pizza"
+
+      click_button("Update")
+
+      visit "/restaurants/#{@fazoli.id}"
+
+      expect(page).to have_content("#{@fazoli.name}")
+      expect(page).to have_content("#{@fazoli.date_opened}")
+      expect(page).to have_content("#{@fazoli.style}")
+
+    end
   end
 end

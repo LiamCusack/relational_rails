@@ -2,8 +2,11 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <p>Edit</p>
-  <input type="text" name="restaurant[name]" value="<%= @restaurant.name %>"/><br/>
-  <input type="datetime" name="restaurant[date_opened]" value="<%= @restaurant.date_opened %>"/><br/>
-  <input type="text" name="restaurant[style]" value="<%= @restaurant.style %>"/><br/>
-  <input type="submit"/>
+  <label for="name">Restaurant Name:</label><br/>
+  <input id="name" name="Restaurant Name:" type="text" /><br/>
+  <label for="datetime">Date Opened:</label><br/>
+  <input id="datetime" name="restaurant[date_opened]" value="<%= @restaurant.date_opened %>"/><br/>
+  <label for="text">Style:</label><br/>
+  <input id="text" name="restaurant[style]" value="<%= @restaurant.style %>"/><br/>
+  <input name="commit" data-disable-with="Update changes" type="submit" value="Update" />
 </form>
