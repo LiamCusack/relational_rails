@@ -1,14 +1,9 @@
-<form action="/networks" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Enter a new network:</p>
-  <label for="network_name">Network Name:</label><br>
-  <input type='text' id='network_name' name='network[name]'/><br/>
-  <label for="date_est">Date Established:</label><br>
-  <input type='datetime' id='date_est' name='network[established]' value='YYYY-MM-DD HH:MM:SS'/><br/>
-  <label for="num_shows">Num of Shows:</label><br>
-  <input type='integer' id='num_shows' name='network[num_of_shows]'/><br/>
-  <input name="commit" data-disable-with="Save changes" type="submit" value="Create Network" />
-</form>
-
-
-
+<%= form_tag "/networks", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name%><br>
+  <%= label_tag :established %>
+  <%= text_field_tag :established%><br>
+  <%= label_tag :num_of_shows %>
+  <%= text_field_tag :num_of_shows%><br>
+  <%= submit_tag 'Create Network' %>
+<% end %>
