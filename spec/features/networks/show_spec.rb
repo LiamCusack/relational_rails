@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a visitor' do
-  describe 'when I visit the Networks ID' do
+  describe 'when I visit the Networks ID Page' do
     before :each do
       @netflix = Network.create({
                           name: 'Netflix',

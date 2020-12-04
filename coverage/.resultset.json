@@ -258,6 +258,37 @@
           null
         ]
       },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/spec/features/networks/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/cydkyd/turing/2mod/projects/relational_rails/spec/features/networks/show_spec.rb": {
         "lines": [
           1,
@@ -306,7 +337,7 @@
         "lines": [
           1,
           1,
-          2,
+          3,
           null,
           null,
           1,
@@ -314,13 +345,13 @@
           null,
           null,
           1,
-          0,
+          1,
           null,
           null,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           1,
@@ -356,6 +387,6 @@
         ]
       }
     },
-    "timestamp": 1607045293
+    "timestamp": 1607049903
   }
 }
