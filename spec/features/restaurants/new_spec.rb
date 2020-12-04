@@ -20,9 +20,9 @@ describe 'When I click the New Restaurant link' do
 
       visit '/restaurants/new'
 
-      fill_in "Restaurant Name:", with: "Cosmo's"
-      fill_in "Date Opened:", with: "2222-02-02 22:22:22"
-      fill_in "Style:", with: "Pizza"
+      fill_in "name", with: "Cosmo's"
+      fill_in "date_opened", with: "2222-02-02 22:22:22"
+      fill_in "style", with: "Pizza"
       click_button("Create Restaurant")
 
       visit '/restaurants'
