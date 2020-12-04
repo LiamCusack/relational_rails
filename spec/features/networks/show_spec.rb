@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a visitor' do
-  describe 'when I visit the Networks Index' do
+  describe 'when I visit the Networks ID' do
     before :each do
       @netflix = Network.create({
                           name: 'Netflix',
@@ -15,12 +15,12 @@ describe 'As a visitor' do
                       })
     end
 
-    it 'the visitor sees the name of each network record' do
+    it 'the visitor sees the network with that ID including the networks attributes' do
       
-      visit '/networks'
+      visit "/networks/#{@netflix.id}"
 
-      expect(page).to have_content(@netflix.name)
-      expect(page).to have_content(@cartoon_network.name)
+      expect(page).to have_content("#{@netflix.name}")
+      expect(page).to have_content("#{@netflix.num_of_shows}")
     end
   end  
 end
