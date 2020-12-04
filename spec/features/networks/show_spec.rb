@@ -43,5 +43,11 @@ describe 'As a visitor' do
       expect(page).to have_content("1997-01-01 01:00:00")
       expect(page).to have_content("4")
     end
+
+    it "the visitor sees the delete Network link, clicks it, and deletes the Network along with all network's shows" do
+      visit "/networks/#{@netflix.id}"
+
+      expect(page).to have_link('Delete')
+    end
   end  
 end
