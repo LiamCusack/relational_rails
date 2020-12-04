@@ -2,8 +2,12 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
   <p>Edit</p>
+ 
+  <label for='name'>Network Name:</label><br/>
   <input type='text' name='network[name]' value="<%= @network.name %>"/><br/>
+  <label for='datetime'>Date Established:</label><br/>
   <input type='datetime' name='network[established]' value="<%= @network.established %>"/><br/>
-  <input type='integer' name='network[num_of_shows]' value="<%= @network.num_of_shows %>"/><br/>
-  <input type='submit'/>
+  <label for='integer'>Num of Shows:</label><br/>
+  <input type='datetime' name='network[num_of_shows]' value="<%= @network.num_of_shows %>"/><br/>
+  <input name="commit" data-disable-with="Save changes" type="submit" value="Update Network" />
 </form>

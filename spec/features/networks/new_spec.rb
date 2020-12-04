@@ -21,7 +21,8 @@ describe 'As a visitor' do
       fill_in "Date Established:", with: "1984-01-01 01:00:00"
       fill_in "Num of Shows:", with: 2
       click_button 'Create Network'
+      visit '/networks'
+      expect(page).to have_content('Lifetime')
     end
-
   end  
 end

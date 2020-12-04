@@ -15,20 +15,14 @@ describe 'As a visitor' do
                       })
     end
 
-    it 'the visitor sees the network with that ID including the networks attributes' do
-      
-      visit "/networks/#{@netflix.id}"
+    it "the visitor is taken to edit page and completes process to edit Network" do
+      visit "/networks/#{@netflix.id}/edit"
 
-      expect(page).to have_content("#{@netflix.name}")
-      expect(page).to have_content("#{@netflix.num_of_shows}")
-    end
+      fill_in "#{@netflix.name}", with: "Lifetime Network"
+      # fill_in "Date Established:", with: "1984-01-01 01:00:00"
+      # fill_in "Num of Shows:", with: 2
+      click_button 'Submit'
 
-    it "the visitor sees a link to update the parent 'Update Network'" do
-      visit "/networks/#{@netflix.id}"
-
-      expect(page).to have_content('Update Network')
-
-      click_link 'Update Network'
     end
   end  
 end
