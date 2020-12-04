@@ -26,9 +26,16 @@ describe 'As a visitor' do
     it "the visitor sees a link to update the parent 'Update Network'" do
       visit "/networks/#{@netflix.id}"
 
-      expect(page).to have_content('Update Network')
+      expect(page).to have_link('Update Network')
 
       click_link 'Update Network'
+
+      visit "/networks/#{@netflix.id}/edit"
+      fill_in "name", with: "Netflix Network"
+      fill_in "established", with: "1997-01-01 01:00:00"
+      fill_in "num_of_shows", with: "6"
+      
+      click_button 'Update Network'
     end
   end  
 end
