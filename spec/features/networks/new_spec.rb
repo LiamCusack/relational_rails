@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a visitor' do
-  describe 'when I visit the Networks Index' do
+  describe 'when I visit the Networks New Page' do
     before :each do
       @netflix = Network.create({
                           name: 'Netflix',
@@ -15,17 +15,14 @@ describe 'As a visitor' do
                       })
     end
 
-    it 'the visitor sees the name of each network record' do
-      
+    it "the visitor fills in a form for a new Network record and clicks the Create Network button" do
+      visit '/networks/new'
+      fill_in "Network Name:", with: "Lifetime"
+      fill_in "Date Established:", with: "1984-01-01 01:00:00"
+      fill_in "Num of Shows:", with: 2
+      click_button 'Create Network'
       visit '/networks'
-
-      expect(page).to have_content(@netflix.name)
-      expect(page).to have_content(@cartoon_network.name)
-    end
-
-    it "the visitor sees a link to create a new Parent record, 'New Parent'" do
-       visit '/networks'
-       expect(page).to have_link('New Network')
+      expect(page).to have_content('Lifetime')
     end
   end  
 end

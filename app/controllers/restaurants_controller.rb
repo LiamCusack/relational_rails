@@ -34,7 +34,7 @@ class RestaurantsController < ApplicationController
                         style: params[:restaurant][:style]
                         })
         restaurant.save
-        redirect_to '/restaurants/#{restaurant.id}'
+        redirect_to "/restaurants/#{restaurant.id}"
     end
 
     def destroy
