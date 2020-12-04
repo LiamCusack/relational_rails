@@ -28,7 +28,6 @@ class NetworksController < ApplicationController
 
   def update
     network = Network.find(params[:id])
-    # require 'pry'; binding.pry
     network.update({
                       name: params[:name],
                       established: params[:established],
