@@ -24,6 +24,9 @@ describe 'When I click the New Restaurant link' do
       fill_in "Date Opened:", with: "2222-02-02 22:22:22"
       fill_in "Style:", with: "Pizza"
       click_button("Create Restaurant")
+
+      visit '/restaurants'
+      expect(page).to have_content("Cosmo's")
     end
   end
 end
