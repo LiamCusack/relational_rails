@@ -22,5 +22,10 @@ describe 'As a visitor' do
       expect(page).to have_content(@netflix.name)
       expect(page).to have_content(@cartoon_network.name)
     end
+
+    it "the visitor sees a link to create a new Parent record, 'New Parent'" do
+       visit '/networks'
+       expect(page).to have_link('new network')
+    end
   end  
 end
