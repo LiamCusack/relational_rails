@@ -18,9 +18,9 @@ describe 'As a visitor' do
     it "the visitor is taken to edit page and completes process to edit Network" do
       visit "/networks/#{@netflix.id}/edit"
 
-      fill_in "#{@netflix.name}", with: "Lifetime Network"
-      # fill_in "Date Established:", with: "1984-01-01 01:00:00"
-      # fill_in "Num of Shows:", with: 2
+      fill_in "Network Name:", with: "Lifetime Network"
+      fill_in "Date Established:", with: "1984-01-01 01:00:00"
+      fill_in "Num of Shows:", with: 2
       click_button 'Submit'
 
     end

@@ -33,7 +33,7 @@ class NetworksController < ApplicationController
                     num_of_shows: params[:network][:num_of_shows]
                 })
     network.save
-    redirect_to '/networks/#{network.id}'
+    redirect_to "/networks/#{network.id}"
   end
 
   def destroy
