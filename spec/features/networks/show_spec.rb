@@ -31,11 +31,17 @@ describe 'As a visitor' do
       click_link 'Update Network'
 
       visit "/networks/#{@netflix.id}/edit"
-      fill_in "name", with: "Netflix Network"
+      fill_in "name", with: "Netflix Yoodle"
       fill_in "established", with: "1997-01-01 01:00:00"
-      fill_in "num_of_shows", with: "6"
+      fill_in "num_of_shows", with: "4"
       
       click_button 'Update Network'
+
+      visit "/networks/#{@netflix.id}"
+
+      expect(page).to have_content("#{@netflix.name}")
+      expect(page).to have_content("1997-01-01 01:00:00")
+      expect(page).to have_content("4")
     end
   end  
 end
