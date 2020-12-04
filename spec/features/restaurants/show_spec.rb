@@ -46,5 +46,19 @@ describe 'As a visitor' do
       expect(page).to have_content("#{@fazoli.style}")
 
     end
+
+    it "words" do
+      visit "/restaurants/#{@fazoli.id}"
+
+      expect(page).to have_link("Delete")
+
+      click_link("Delete")
+
+      visit "/restaurants"
+
+      expect(page).to_not have_content("#{@fazoli.name}")
+      expect(page).to_not have_content("#{@fazoli.date_opened}")
+      expect(page).to_not have_content("#{@fazoli.style}")
+    end
   end
 end
