@@ -10,10 +10,10 @@ class NetworksController < ApplicationController
 
   def create
      network = Network.new({
-                           name: params[:network][:name],
-                           established: params[:network][:established],
-                           num_of_shows: params[:network][:num_of_shows]
-                        })
+                            name: params[:network][:name],
+                            established: params[:network][:established],
+                            num_of_shows: params[:network][:num_of_shows]
+                          })
     network.save
     redirect_to '/networks'
   end
@@ -29,10 +29,10 @@ class NetworksController < ApplicationController
   def update
     network = Network.find(params[:id])
     network.update({
-                      name: params[:name],
-                      established: params[:established],
-                      num_of_shows: params[:num_of_shows]
-                    })
+                    name: params[:name],
+                    established: params[:established],
+                    num_of_shows: params[:num_of_shows]
+                  })
     network.save
     redirect_to "/networks/#{network.id}"
   end
