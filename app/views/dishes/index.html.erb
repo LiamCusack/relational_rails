@@ -1,0 +1,12 @@
+<a href="/restaurants">Restaurant Index</a><br/>
+
+<h1>All Dishes</h1>
+
+<a href="/">home</a>
+<br/>
+
+<% @dishes.each do |dish| %>
+  <h3><a href="/dishes/<%= dish.id %>"><%= dish.name %></a></h3>
+<% end %>
+
+<a href="/dishes/new">New Dish</a>

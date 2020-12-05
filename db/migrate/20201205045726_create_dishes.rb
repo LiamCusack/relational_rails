@@ -4,7 +4,6 @@ class CreateDishes < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :spicy
       t.string :taste
-      t.integer :restaurant_id
     end
   end
 end

@@ -1,0 +1,10 @@
+<a href="/restaurants">Restaurant Index</a><br/>
+
+<h1>Sup Dishes</h1><br/>
+ <% binding.pry %>
+<% @restaurants.dish.each do |dish| %><br/>
+  <h3><a href="/restaurants/<%= restaurant.id %>/<%= dish.restaurant_id %>"></a></h3><br/>
+  <h5><%= @restaurant.name %></h5><br/>
+  <p><%= @restaurant.date_opened %></p><br/>
+  <p><%= @restaurant.style %></p><br/>
+<% end %><br/>
