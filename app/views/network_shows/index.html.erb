@@ -1,0 +1,9 @@
+<h1>All Network Shows</h1>
+
+<% @network_shows.each do |network_show| %>
+  <h3><a href="/network_shows/<%= network_show.id %>"><%= network_show.name %></a></h3>
+<% end %>
+
+<a href="/">Home</a>
+<br/>
+<a href="/network_shows/new">New Network Show</a>

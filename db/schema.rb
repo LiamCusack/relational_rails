@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_214216) do
+ActiveRecord::Schema.define(version: 2020_12_05_034414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,10 +36,10 @@ ActiveRecord::Schema.define(version: 2020_12_02_214216) do
 
   create_table "shows", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer "network_id"
     t.boolean "daytime_show"
+    t.bigint "network_id"
+    t.index ["network_id"], name: "index_shows_on_network_id"
   end
 
+  add_foreign_key "shows", "networks"
 end
