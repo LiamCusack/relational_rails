@@ -1,0 +1,12 @@
+<a href="/restaurants">Restaurant Index</a><br/>
+<form action="/dishes" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new dish:</p>
+  <label for="dish_name">Dish Name:</label><br>
+  <input type='text' id='dish_name' name='dish[name]'/><br/>
+  <label for="spicy?">Date Opened:</label><br>
+  <input type='boolean' id='spicy?' name='dish[spicy]'/><br/>
+  <label for="taste">Style:</label><br>
+  <input type='text' id='taste' name='dish[taste]'/><br/>
+  <input name="commit" data-disable-with="Save changes" type="submit" value="Create Dish" />
+</form>

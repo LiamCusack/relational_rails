@@ -1,10 +1,11 @@
 <a href="/restaurants">Restaurant Index</a><br/>
 
 <h1>Sup Dishes</h1><br/>
- <% binding.pry %>
-<% @restaurants.dish.each do |dish| %><br/>
-  <h3><a href="/restaurants/<%= restaurant.id %>/<%= dish.restaurant_id %>"></a></h3><br/>
-  <h5><%= @restaurant.name %></h5><br/>
-  <p><%= @restaurant.date_opened %></p><br/>
-  <p><%= @restaurant.style %></p><br/>
+<% @restaurant.dishes.each do |dish| %><br/>
+
+  <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/<%= dish.restaurant_id %>"><%= dish.name %></a></h3><br/>
+  <h5><%= dish.name %></h5><br/>
+  <p><%= dish.spicy %></p><br/>
+  <p><%= dish.taste %></p><br/>
 <% end %><br/>
+<h3><a href="/restaurants/<%= @restaurant.id %>/dishes/new">Add Dish</a></h3>

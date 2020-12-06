@@ -4,17 +4,16 @@ class DishesController < ApplicationController
   end
 
   def new
-
   end
 
   def create
     dish = Dish.new({
-                                name: params[:dish][:name],
-                                spicy: params[:dish][:spicy],
-                                taste: params[:dish][:taste]
-                                })
+                    name: params[:name],
+                    spicy: params[:spicy],
+                    taste: params[:taste]
+                    })
       dish.save
-      redirect_to '/dishes'
+      redirect_to "/dishes"
     end
 
     def show

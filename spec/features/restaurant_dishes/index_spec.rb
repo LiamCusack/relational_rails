@@ -13,6 +13,7 @@ describe 'As a visitor' do
         name: "Pizza",
         spicy: "False",
         taste: "Salty/Savory",
+        restaurant_id: @fazoli.id
         })
     end
     describe "I see each dish that is associated with that restaurant" do
