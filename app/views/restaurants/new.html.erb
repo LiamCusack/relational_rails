@@ -1,12 +1,10 @@
-<a href="/restaurants">Restaurant Index</a><br/>
-<form action="/restaurants" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Enter a new restaurant:</p>
-  <label for="restaurant_name">Restaurant Name:</label><br>
-  <input type='text' id='restaurant_name' name='restaurant[name]'/><br/>
-  <label for="date_est">Date Opened:</label><br>
-  <input type='datetime' id='date_est' name='restaurant[date_opened]' value='YYYY-MM-DD HH:MM:SS'/><br/>
-  <label for="style">Style:</label><br>
-  <input type='text' id='style' name='restaurant[style]'/><br/>
-  <input name="commit" data-disable-with="Save changes" type="submit" value="Create Restaurant" />
-</form>
+<p>Enter a new restaurant</p>
+<%= form_tag "/restaurants", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :date_opened %>
+  <%= text_field_tag :date_opened %><br>
+  <%= label_tag :style %>
+  <%= text_field_tag :style %><br>
+  <%= submit_tag 'Create Restaurant' %>
+<% end %>

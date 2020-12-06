@@ -10,9 +10,9 @@ class RestaurantsController < ApplicationController
 
   def create
     restaurant = Restaurant.new({
-                                name: params[:restaurant][:name],
-                                date_opened: params[:restaurant][:date_opened],
-                                style: params[:restaurant][:style]
+                                name: params[:name],
+                                date_opened: params[:date_opened],
+                                style: params[:style]
                                 })
       restaurant.save
       redirect_to '/restaurants'
