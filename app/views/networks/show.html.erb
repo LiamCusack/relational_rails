@@ -1,8 +1,11 @@
 <h1><%= @network.name %></h1>
-<p><%= @network.established %></p>
-<p><%= @network.num_of_shows %></p>
+<h4> Established: <%= @network.established %></h4>
+<h4> Number of Shows: <%= @network.num_of_shows %></h4>
 
-<a href="/networks">Network Index</a>
+ <%= link_to "List of Shows", "/networks/#{ @network.id }/shows" %>
+<br/>
+<br/>
+<a href="/networks">Back to Networks</a>
 <br/>
 <a href="/networks/<%= @network.id %>/edit"> Update Network</a>
 <br/>

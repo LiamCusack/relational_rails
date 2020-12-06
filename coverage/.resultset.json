@@ -270,6 +270,7 @@
         "lines": [
           1,
           1,
+          1,
           null
         ]
       },
@@ -284,6 +285,7 @@
         "lines": [
           1,
           1,
+          1,
           null
         ]
       },
@@ -294,7 +296,20 @@
           1,
           null,
           null,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -305,16 +320,8 @@
           1,
           null
         ]
-      },
-      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/models/network_show.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1607145673
+    "timestamp": 1607273426
   }
 }

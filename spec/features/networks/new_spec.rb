@@ -17,9 +17,9 @@ describe 'As a visitor' do
 
     it "the visitor fills in a form for a new Network record and clicks the Create Network button" do
       visit '/networks/new'
-      fill_in "Network Name:", with: "Lifetime"
-      fill_in "Date Established:", with: "1984-01-01 01:00:00"
-      fill_in "Num of Shows:", with: 2
+      fill_in "Name", with: "Lifetime"
+      fill_in "Established", with: "1984-01-01 01:00:00"
+      fill_in "Num of shows", with: 2
       click_button 'Create Network'
       visit '/networks'
       expect(page).to have_content('Lifetime')
