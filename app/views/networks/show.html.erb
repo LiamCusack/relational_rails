@@ -1,22 +1,11 @@
 <h1><%= @network.name %></h1>
-<h4> Established: <%= @network.established %></h4>
-<h4> Number of Shows: <%= @network.shows.count %></h4>
-
-<!--<% @network.shows.each do |show| %>
-  <h3><a href="/networks/<%= @network.id %>/shows/<%= show.id %>"><%= show.name %></a></h3>
-  <h5>Daytime Show: <%= show.daytime_show %></h5>
-<% end %>-->
-
-<%= link_to 'List of Shows', "/networks/#{@network.id}/shows" %>
-<br/>
-<br/>
-<%= link_to "Create Show", "/networks/#{@network.id}/shows/new" %>
-<br/>
-<a href="/networks/<%= @network.id %>/edit"> Update Network</a>
-<br/>
-<%= link_to 'Delete Network', "/networks/#{@network.id}", method: :delete %>
-<br/>
-<a href="/networks">Back to Networks</a>
+<h5> Established: <%= @network.established %></h5>
+<h5> Number of Shows: <%= @network.shows.count %></h5>
+<h3><%= link_to 'List of Shows', "/networks/#{@network.id}/shows" %></h3><br/>
+<%= link_to 'Create Show', "/networks/#{@network.id}/shows/new" %><br/>
+<%= link_to 'Update Network', "/networks/#{@network.id}/edit" %><br/>
+<%= link_to 'Delete Network', "/networks/#{@network.id}", method: :delete %><br/>
+<%= link_to 'Back to Networks', "/networks" %>
 
 
 

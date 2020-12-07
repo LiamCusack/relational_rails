@@ -54,8 +54,8 @@ describe 'As a visitor' do
       visit "/networks/#{@netflix.id}/shows/new"
 
       fill_in "Name", with: "Cannon Buster"
-      fill_in "Number of Seasons", with: 1
-      fill_in "Daytime Show (true/false):", with: "false"
+      fill_in "Number of Seasons:", with: 1
+      check "Daytime Show?"
       click_button 'Create Show'
 
       visit "/networks/#{@netflix.id}/shows"

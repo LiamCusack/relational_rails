@@ -1,9 +1,9 @@
 <%= form_tag "/networks/#{@network.id}", method: :patch do %>
-  <%= label_tag :name %>
+  <%= label_tag :name, "Name:" %>
   <%= text_field_tag :name, @network.name %><br>
-  <%= label_tag :established %>
+  <%= label_tag :established, "Established:" %>
   <%= text_field_tag :established, @network.established %><br>
-  <%= label_tag :num_of_shows %>
+  <%= label_tag :num_of_shows, "Number of Shows:" %>
   <%= text_field_tag :num_of_shows, @network.num_of_shows %><br>
   <%= submit_tag 'Update Network' %>
 <% end %>

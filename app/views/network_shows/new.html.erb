@@ -1,16 +1,10 @@
 <%= form_tag ("/networks/#{ @network.id }/shows"), method: :post do %>
-  <%= label_tag :name %>
+  <%= label_tag :name, "Name:" %>
   <%= text_field_tag :name%><br>
-
- 
-
   <%= label_tag :num_of_seasons, "Number of Seasons:" %>
   <%= text_field_tag :num_of_seasons%><br>
-
-
-  <%= label_tag :daytime_show, "Daytime Show (true/false):"%> 
-  <%= text_field_tag :daytime_show%><br>
-  <br>
-
+  <%= label_tag :daytime_show, "Daytime Show?" %>
+  <%= hidden_field_tag :daytime_show, false %>
+  <%= check_box_tag :daytime_show, true %><br>
   <%= submit_tag 'Create Show' %>
 <% end %>

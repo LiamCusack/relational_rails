@@ -33,7 +33,7 @@ describe 'As a visitor' do
 
       visit "/shows/#{@bojack_horseman.id}/edit"
 
-      fill_in "Num of seasons", with: 7
+      fill_in "Number of Seasons:", with: 7
       click_on('Submit Update')
 
       visit "/shows/#{@bojack_horseman.id}"

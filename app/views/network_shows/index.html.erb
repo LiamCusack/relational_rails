@@ -1,16 +1,11 @@
 <h1>List of <%= link_to "#{@network.name}", "/networks/#{@network.id}"%> Shows</h1>
-<%= link_to "Create Show", "/networks/#{@network.id}/shows/new" %>
-<br/>
-<a href="/">Home</a>
-
+<%= link_to 'Home', "/" %><br/>
+<%= link_to "Create Show", "/networks/#{@network.id}/shows/new" %><br/>
 <% @network.shows.each do |show| %>
   <h2><%= show.name %></h2>
-  <h5>Daytime Show: <%= show.daytime_show %></h5>
-  <h5>Number of Seasons: <%= show.num_of_seasons %></h5>
-
-<%= link_to "Update Show", "shows/#{show.id}/edit" %>
-<br/>
-<%= link_to "Delete Show", "shows/#{show.id}/delete" %>
-<br/>
+  <h4>Daytime Show: <%= show.daytime_show %></h4>
+  <h4>Number of Seasons: <%= show.num_of_seasons %></h4>
+  <h5><%= link_to "Update Show", "shows/#{show.id}/edit" %></h5>
+  <h5><%= link_to "Delete Show", "shows/#{show.id}/delete" %></h5>
 <% end %>
 
