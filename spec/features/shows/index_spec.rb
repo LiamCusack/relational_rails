@@ -11,14 +11,14 @@ describe 'As a visitor' do
           @bojack_horseman = Show.create!({
                           name: 'Bojack Horseman',
                           daytime_show: true,
+                          num_of_seasons: 6,
                           network_id: @netflix.id
                       })
     end
-
-    it 'the visitor sees the name of each show' do
-      
+    # User Story 6
+    it 'the visitor sees each show and all their attributes' do
       visit '/shows'
-      save_and_open_page
+
       expect(page).to have_content(@bojack_horseman.name)
       expect(page).to have_content(@bojack_horseman.daytime_show)
     end

@@ -23,9 +23,9 @@ describe 'As a visitor' do
     end
 
     it "the visitor sees a link to create a new Parent record, 'New Parent'" do
-       visit '/networks'
-       
-       expect(page).to have_link('New Network')  
+      visit '/networks'
+      
+      expect(page).to have_link('New Network')  
     end
   end  
 end

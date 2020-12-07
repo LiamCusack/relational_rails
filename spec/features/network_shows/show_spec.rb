@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a visitor' do
-  describe 'when I visit the networks show index page' do
+  describe 'when I visit the shows show page' do
     before :each do
       @netflix = Network.create!({
                       name: 'Netflix',
@@ -33,34 +33,17 @@ describe 'As a visitor' do
                       network_id: @cartoon_network.id
                   })
     end
-    # User Story 7
-    it "the visitor sees each show and their attributes that is associated with that network" do
-      visit "/networks/#{@netflix.id}/shows"
-      
+    
+    it "the visitor sees the show and their attributes" do
+      visit "/shows/#{@bojack_horseman.id}"
+
       expect(page).to have_content(@bojack_horseman.name)
-      expect(page).to have_content(@cannon_busters.name)
+      expect(page).to have_content(@bojack_horseman.daytime_show)
 
-      visit "/networks/#{@cartoon_network.id}/shows"
-      
+      visit "/network_shows/#{@ricky_and_morty.id}"
+
       expect(page).to have_content(@ricky_and_morty.name)
-      expect(page).to_not have_content(@cannon_busters.name)
-    end
-    # User Story 9
-    it 'the visitor sees a link to create new show for that network clicks the link, fills in form, and new show is created' do
-      visit "/networks/#{@netflix.id}/shows"
-
-      expect(page).to have_link('Create Show')  
-
-      visit "/networks/#{@netflix.id}/shows/new"
-
-      fill_in "Name", with: "Cannon Buster"
-      fill_in "Number of Seasons", with: 1
-      fill_in "Daytime Show (true/false):", with: "false"
-      click_button 'Create Show'
-
-      visit "/networks/#{@netflix.id}/shows"
-
-      expect(page).to have_content('Cannon Busters')
+      expect(page).to have_content(@ricky_and_morty.daytime_show)
     end
   end
 end

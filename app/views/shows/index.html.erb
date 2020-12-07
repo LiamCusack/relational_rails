@@ -1,10 +1,8 @@
 <h1>All Shows</h1>
 
 <% @shows.each do |show| %>
-  <h3><a href="/shows/<%= show.id %>"><%= show.name %></a></h3>
+  <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
   <p>Daytime Show:<%= show.daytime_show %></p>
+  <p>Number of Seasons:<%= show.num_of_seasons %></p>
 <% end %>
 
-<a href="/">Home</a>
-<br/>
-<a href="/shows/new">New Show</a>
