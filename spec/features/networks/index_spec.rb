@@ -6,12 +6,12 @@ describe 'As a visitor' do
       @netflix = Network.create({
                           name: 'Netflix',
                           established: '1997-01-01 11:00:00',
-                          num_of_shows: 3
+                          num_of_employees: 3
                       })
       @cartoon_network = Network.create({
                           name: 'Cartoon Network',
                           established: '1992-01-01 01:00:00',
-                          num_of_shows: 4
+                          num_of_employees: 4
                       })
     end
 

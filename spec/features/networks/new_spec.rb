@@ -6,12 +6,12 @@ describe 'As a visitor' do
       @netflix = Network.create({
                           name: 'Netflix',
                           established: '1997-01-01 11:00:00',
-                          num_of_shows: 3
+                          num_of_employees: 3
                       })
       @cartoon_network = Network.create({
                           name: 'Cartoon Network',
                           established: '1992-01-01 01:00:00',
-                          num_of_shows: 4
+                          num_of_employees: 4
                       })
     end
 
@@ -19,7 +19,7 @@ describe 'As a visitor' do
       visit '/networks/new'
       fill_in "Name", with: "Lifetime"
       fill_in "Established", with: "1984-01-01 01:00:00"
-      fill_in "Num of shows", with: 2
+      fill_in "Num of Employees", with: 2
       click_button 'Create Network'
       visit '/networks'
       expect(page).to have_content('Lifetime')

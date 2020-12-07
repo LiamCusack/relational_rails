@@ -1,6 +1,6 @@
 <h1><%= @network.name %></h1>
 <h5> Established: <%= @network.established %></h5>
-<h5> Number of Shows: <%= @network.shows.count %></h5>
+<h5> Number of Employees: <%= @network.num_of_employees %></h5>
 <h3><%= link_to 'List of Shows', "/networks/#{@network.id}/shows" %></h3><br/>
 <%= link_to 'Create Show', "/networks/#{@network.id}/shows/new" %><br/>
 <%= link_to 'Update Network', "/networks/#{@network.id}/edit" %><br/>

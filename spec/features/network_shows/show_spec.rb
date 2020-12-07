@@ -6,7 +6,7 @@ describe 'As a visitor' do
       @netflix = Network.create!({
                       name: 'Netflix',
                       established: '1997-01-01 11:00:00',
-                      num_of_shows: 2
+                      num_of_employees: 2
                   })
       @bojack_horseman = Show.create!({
                       name: 'Bojack Horseman',
@@ -24,7 +24,7 @@ describe 'As a visitor' do
       @cartoon_network = Network.create!({
                       name: 'Cartoon Network',
                       established: '1992-10-01 11:00:00',
-                      num_of_shows: 1
+                      num_of_employees: 1
                   })
       @ricky_and_morty = Show.create!({
                       name: 'Rick and Morty',

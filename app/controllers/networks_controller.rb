@@ -12,7 +12,7 @@ class NetworksController < ApplicationController
     network = Network.new({
                             name: params[:name],
                             established: params[:established],
-                            num_of_shows: params[:num_of_shows]
+                            num_of_employees: params[:num_of_employees]
                           })
     network.save
     redirect_to '/networks'
@@ -31,7 +31,7 @@ class NetworksController < ApplicationController
     network.update({
                     name: params[:name],
                     established: params[:established],
-                    num_of_shows: params[:num_of_shows]
+                    num_of_employees: params[:num_of_employees]
                   })
     network.save
     redirect_to "/networks/#{network.id}"

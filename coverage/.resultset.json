@@ -273,9 +273,9 @@
           1,
           1,
           null,
-          null,
           1,
           0,
+          null,
           null
         ]
       },
@@ -285,8 +285,17 @@
           1,
           null
         ]
+      },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/models/show.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1607370404
+    "timestamp": 1607385344
   }
 }
