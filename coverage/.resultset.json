@@ -264,12 +264,7 @@
           null
         ]
       },
-      "/Users/liamcusack/turing/module_2/relational_rails/spec/features/dishes/new_spec.rb": {
-        "lines": [
-
-        ]
-      },
-      "/Users/liamcusack/turing/module_2/relational_rails/spec/features/dishes/show_spec.rb": {
+      "/Users/liamcusack/turing/module_2/relational_rails/spec/features/restaurant_dishes/new_spec.rb": {
         "lines": [
           1,
           null,
@@ -290,12 +285,14 @@
           null,
           null,
           1,
-          null,
           1,
           null,
           1,
+          null,
           1,
           1,
+          1,
+          null,
           null,
           null,
           null
@@ -324,48 +321,29 @@
           null
         ]
       },
-      "/Users/liamcusack/turing/module_2/relational_rails/app/controllers/dishes_controller.rb": {
+      "/Users/liamcusack/turing/module_2/relational_rails/app/controllers/restaurant_dishes_controller.rb": {
         "lines": [
           1,
           1,
-          1,
+          5,
           null,
           null,
-          1,
-          null,
-          null,
-          1,
-          0,
           null,
           null,
           null,
           null,
-          0,
-          0,
+          1,
+          2,
           null,
           null,
           1,
           1,
+          1,
+          null,
+          null,
           null,
           null,
           1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
           null,
           null
         ]
@@ -377,6 +355,6 @@
         ]
       }
     },
-    "timestamp": 1607303275
+    "timestamp": 1607305173
   }
 }

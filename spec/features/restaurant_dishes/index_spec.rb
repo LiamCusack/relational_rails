@@ -26,5 +26,23 @@ describe 'As a visitor' do
         expect(page).to have_content(@pizza.taste)
       end
     end
+    describe "I see a link to add a new dish for that restaurant" do
+      it "I click that link" do
+
+        visit "/restaurants/#{@fazoli.id}/dishes"
+        expect(page).to have_link('Add Dish')
+        click_link("Add Dish")
+        visit "/restaurants/#{@fazoli.id}/dishes/new"
+
+        fill_in "name", with: "Pie"
+        fill_in "taste", with: "sweet"
+        click_button("Create Dish")
+
+        visit "/restaurants/#{@fazoli.id}/dishes"
+        expect(page).to have_content("Pie")
+        expect(page).to have_content("false")
+        expect(page).to have_content("sweet")
+      end
+    end
   end
 end
