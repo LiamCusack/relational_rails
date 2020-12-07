@@ -16,12 +16,12 @@ Rails.application.routes.draw do
   patch '/restaurants/:id', to: 'restaurants#update'
   delete '/restaurants/:id', to: 'restaurants#destroy'
 
-  get '/shows', to: 'shows#index' #US 6 
-  get '/networks/:id/shows', to: 'network_shows#index' #US 7 
-  get 'shows/:id', to: 'shows#show' #US 8 
-  get 'networks/:id/shows/new', to: 'network_shows#new'#US 9
-  post '/networks/:id/shows', to: 'network_shows#create' #US 9
-  get '/shows/:id/edit', to: 'shows#edit' #US 10
-  patch 'shows/:id', to: 'shows#update' #US 10
-  delete '/shows/:id', to: 'shows#destroy' #US 11
+  get '/shows', to: 'shows#index' 
+  get '/networks/:id/shows', to: 'network_shows#index' 
+  get 'shows/:id', to: 'shows#show' 
+  get 'networks/:id/shows/new', to: 'network_shows#new'
+  post '/networks/:id/shows', to: 'network_shows#create' 
+  get '/shows/:id/edit', to: 'shows#edit' 
+  patch 'shows/:id', to: 'shows#update' 
+  delete '/shows/:id', to: 'shows#destroy' 
 end
