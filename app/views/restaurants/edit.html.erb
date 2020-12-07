@@ -1,14 +1,11 @@
 <a href="/restaurants">Restaurant Index</a><br/>
 
-<form action="/restaurants/<%= @restaurant.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Edit</p>
-  <label for="name">Restaurant Name:</label><br/>
-  <input id="name" name="Restaurant Name:" type="text" /><br/>
-  <label for="datetime">Date Opened:</label><br/>
-  <input id="datetime" name="restaurant[date_opened]" value="<%= @restaurant.date_opened %>"/><br/>
-  <label for="text">Style:</label><br/>
-  <input id="text" name="restaurant[style]" value="<%= @restaurant.style %>"/><br/>
-  <input name="commit" data-disable-with="Update changes" type="submit" value="Update" />
-</form>
+<%= form_tag "/restaurants/#{@restaurant.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @restaurant.name %><br>
+  <%= label_tag :date_opened %>
+  <%= text_field_tag :date_opened, @restaurant.date_opened %><br>
+  <%= label_tag :style %>
+  <%= text_field_tag :style, @restaurant.style %><br>
+  <%= submit_tag 'Update Restaurant' %>
+<% end %>

@@ -1,12 +1,10 @@
-<a href="/restaurants">Restaurant Index</a><br/>
-<form action="/restaurants/:id/dishes" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Enter a new dish:</p>
-  <label for="dish_name">Dish Name:</label><br>
-  <input type='text' id='dish_name' name='dish[name]'/><br/>
-  <label for="spicy?">Is it spicy?:</label><br>
-  <input type='boolean' id='spicy?' name='dish[spicy]'/><br/>
-  <label for="taste">Style:</label><br>
-  <input type='text' id='taste' name='dish[taste]'/><br/>
-  <input name="commit" data-disable-with="Save changes" type="submit" value="Create Dish" />
-</form>
+<%= form_tag "/restaurants/#{@restaurant.id}/dishes", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :spicy %>
+  <%= hidden_field_tag :spicy, false %>
+  <%= check_box_tag :spicy, true %><br>
+  <%= label_tag :taste %>
+  <%= text_field_tag :taste %><br>
+  <%= submit_tag 'Create Dish' %>
+<% end %>

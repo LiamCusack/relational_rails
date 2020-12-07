@@ -33,8 +33,8 @@ describe 'As a visitor' do
 
       visit "/restaurants/#{@fazoli.id}/edit"
 
-      fill_in "Restaurant Name:", with: "Cosmo's"
-      fill_in "Date Opened:", with: "2222-02-02 22:22:22"
+      fill_in "name", with: "Cosmo's"
+      fill_in "date_opened", with: "2222-02-02 22:22:22"
       fill_in "Style:", with: "Pizza"
 
       click_button("Update")

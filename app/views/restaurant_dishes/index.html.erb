@@ -1,11 +1,10 @@
 <a href="/restaurants">Restaurant Index</a><br/>
 
 <h1>Sup Dishes</h1><br/>
-<% @restaurant.dishes.each do |dish| %><br/>
-
-  <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/<%= dish.restaurant_id %>"><%= dish.name %></a></h3><br/>
-  <h5><%= dish.name %></h5><br/>
-  <p><%= dish.spicy %></p><br/>
-  <p><%= dish.taste %></p><br/>
+<% @restaurant.dishes.each do |dish| %>
+  <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/<%= dish.restaurant_id %>"><%= dish.name %></a></h3>
+  <p><h3>
+  Is this dish spicy?<%= dish.spicy %><br/>
+  Tastes <%= dish.taste %><h3/></p><br/>
 <% end %><br/>
 <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/new">Add Dish</a></h3>
