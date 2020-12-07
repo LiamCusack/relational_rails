@@ -4,7 +4,7 @@
 <% @restaurant.dishes.each do |dish| %>
   <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/<%= dish.restaurant_id %>"><%= dish.name %></a></h3>
   <p><h3>
-  Is this dish spicy?<%= dish.spicy %><br/>
+  Is this dish spicy? <%= dish.spicy %><br/>
   Tastes <%= dish.taste %><h3/></p><br/>
 <% end %><br/>
 <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/new">Add Dish</a></h3>
