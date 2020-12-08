@@ -5,4 +5,8 @@ class Dish < ApplicationRecord
   def self.sort_by_spicy
     order(spicy: :desc)
   end
+
+  def self.dishes_count(restaurant)
+    where(restaurant_id: restaurant).count
+  end
 end
