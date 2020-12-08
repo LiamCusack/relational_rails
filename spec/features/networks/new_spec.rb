@@ -5,21 +5,18 @@ describe 'As a visitor' do
     before :each do
       @netflix = Network.create({
                           name: 'Netflix',
-                          established: '1997-01-01 11:00:00',
-                          num_of_shows: 3
+                          established: '1997-01-01 11:00:00'
                       })
       @cartoon_network = Network.create({
                           name: 'Cartoon Network',
-                          established: '1992-01-01 01:00:00',
-                          num_of_shows: 4
+                          established: '1992-01-01 01:00:00'
                       })
     end
 
     it "the visitor fills in a form for a new Network record and clicks the Create Network button" do
       visit '/networks/new'
-      fill_in "Network Name:", with: "Lifetime"
-      fill_in "Date Established:", with: "1984-01-01 01:00:00"
-      fill_in "Num of Shows:", with: 2
+      fill_in "Name", with: "Lifetime"
+      fill_in "Established", with: "1984-01-01 01:00:00"
       click_button 'Create Network'
       visit '/networks'
       expect(page).to have_content('Lifetime')
