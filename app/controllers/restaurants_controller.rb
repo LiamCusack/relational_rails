@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all.order(date_opened: :desc)
   end
 
+
   def new
   end
 

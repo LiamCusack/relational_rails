@@ -4,4 +4,5 @@
 <%= @dish.spicy %><br/>
 <%= @dish.taste %>
 <%= link_to "Update Dish", "/dishes/#{@dish.id}/edit"%>
+<%= link_to 'Delete Dish', "/dishes/#{@dish.id}", method: :delete %>
 <% end %>

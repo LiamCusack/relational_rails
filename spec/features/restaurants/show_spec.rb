@@ -8,11 +8,6 @@ describe 'As a visitor' do
                                   date_opened: "1593-02-24 11:11:11",
                                   style: "Italian"
                                   })
-      @tacostar = Restaurant.create({
-                                  name: "Taco Star",
-                                  date_opened: "1593-02-24 11:11:11",
-                                  style: "Mexican"
-                                  })
 
       end
     it 'the visitor sees the attributes of each restaurant with that id' do
@@ -47,18 +42,18 @@ describe 'As a visitor' do
 
     end
 
-    it "words" do
+    it "I see a link to delete each restaurant that will return me to the restaurant index" do
       visit "/restaurants/#{@fazoli.id}"
 
-      expect(page).to have_link("Delete")
+      expect(page).to have_link("Delete Restaurant")
 
-      click_link("Delete")
+      click_link("Delete Restaurant")
 
       visit "/restaurants"
 
-      expect(page).to_not have_content("#{@fazoli.name}")
-      expect(page).to_not have_content("#{@fazoli.date_opened}")
-      expect(page).to_not have_content("#{@fazoli.style}")
+      expect(page).to_not have_content("Fazoli's")
+      expect(page).to_not have_content("1593-02-24 11:11:11")
+      expect(page).to_not have_content("Italian")
     end
   end
 end

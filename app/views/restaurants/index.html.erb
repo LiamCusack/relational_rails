@@ -6,6 +6,7 @@
 
 <% @restaurants.each do |restaurant| %>
   <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
+  <h3><%= restaurant.date_opened %><h3/>
 <% end %>
 
 <a href="/restaurants/new">New Restaurant</a>

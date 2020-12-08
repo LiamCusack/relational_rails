@@ -45,7 +45,20 @@ describe 'As a visitor' do
       expect(page).to have_content("Calzone")
       expect(page).to have_content("false")
       expect(page).to have_content("Calzoney")
+    end
 
+    it "I see a link to delete each restaurant that will return me to the index page" do
+      visit "/dishes/#{@pizza.id}"
+
+      expect(page).to have_link("Delete")
+
+      click_link("Delete")
+
+      visit "/dishes"
+
+      expect(page).to_not have_content("Pizza")
+      expect(page).to_not have_content("false")
+      expect(page).to_not have_content("Salty/Savory")
     end
   end
 end
