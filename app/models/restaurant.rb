@@ -5,4 +5,8 @@ class Restaurant < ApplicationRecord
   def dish_count
     dishes.count
   end
+
+  def self.sort_by_date_desc
+    order(date_opened: :desc)
+  end
 end
