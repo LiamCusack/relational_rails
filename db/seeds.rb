@@ -7,8 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 netflix = Network.create!({
                 name: 'Netflix',
-                established: '1997-01-01 11:00:00',
-                num_of_shows: 2
+                established: '1997-01-01 11:00:00'
             })
 bojack_horseman = Show.create!({
                 name: 'Bojack Horseman',

@@ -2,7 +2,7 @@ class Network < ApplicationRecord
   has_many :shows, dependent: :destroy
   validates_presence_of :name, :established
 
-  def shows_count
-    shows.count
+  def self.most_recent
+    order(established: :desc)
   end
 end

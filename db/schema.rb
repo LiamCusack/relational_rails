@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_051128) do
+ActiveRecord::Schema.define(version: 2020_12_08_005548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_051128) do
     t.string "name"
     t.boolean "spicy"
     t.string "taste"
-    t.bigint "restaurant_id"
-    t.index ["restaurant_id"], name: "index_dishes_on_restaurant_id"
-  end
-
-  create_table "dishes_restaurants", id: false, force: :cascade do |t|
-    t.bigint "dish_id", null: false
-    t.bigint "restaurant_id", null: false
+    t.integer "restaurant_id"
   end
 
   create_table "networks", force: :cascade do |t|
@@ -47,6 +41,5 @@ ActiveRecord::Schema.define(version: 2020_12_05_051128) do
     t.index ["network_id"], name: "index_shows_on_network_id"
   end
 
-  add_foreign_key "dishes", "restaurants"
   add_foreign_key "shows", "networks"
 end

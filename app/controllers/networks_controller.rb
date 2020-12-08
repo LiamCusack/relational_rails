@@ -1,7 +1,8 @@
 class NetworksController < ApplicationController
 
   def index
-    @networks = Network.all.order(established: :desc)
+    # @networks = Network.all.order(established: :desc)
+    @networks = Network.all.most_recent
   end
 
   def new

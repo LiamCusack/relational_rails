@@ -1,6 +1,7 @@
 class NetworkShowsController < ApplicationController
   def index
     @network = Network.find(params[:id])
+    @shows = @network.shows.true_before_false
   end
 
   def new
@@ -22,6 +23,6 @@ class NetworkShowsController < ApplicationController
   
   private 
   def show_params
-  params.permit(:name, :daytime_show, :num_of_seasons)
+    params.permit(:name, :daytime_show, :num_of_seasons)
   end
 end 
