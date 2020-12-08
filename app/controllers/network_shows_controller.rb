@@ -14,7 +14,7 @@ class NetworkShowsController < ApplicationController
     redirect_to "/networks/#{networks.id}/shows"
   end
   
-  # def destroy
+  # def destroy lololol
   #   networks = Networks.find(params[:id])
   #   shows = Show.find(params[:id])
   #   Shows.destroy(params[:id])
