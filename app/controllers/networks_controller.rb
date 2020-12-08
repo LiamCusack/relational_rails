@@ -5,7 +5,6 @@ class NetworksController < ApplicationController
   end
 
   def new
-
   end
 
   def create

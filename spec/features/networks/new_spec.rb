@@ -21,5 +21,5 @@ describe 'As a visitor' do
       visit '/networks'
       expect(page).to have_content('Lifetime')
     end
-  end  
+  end
 end

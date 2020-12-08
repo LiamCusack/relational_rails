@@ -1,9 +1,11 @@
+
+<p>Enter a new restaurant</p>
 <%= form_tag "/restaurants", method: :post do %>
-  <%= label_tag :name %>
+  <%= label_tag :name %><br>
   <%= text_field_tag :name %><br>
-  <%= label_tag :date_opened %>
+  <%= label_tag :date_opened %><br>
   <%= text_field_tag :date_opened %><br>
-  <%= label_tag :style %>
+  <%= label_tag :style %><br>
   <%= text_field_tag :style %><br>
   <%= submit_tag 'Create Restaurant' %>
 <% end %>

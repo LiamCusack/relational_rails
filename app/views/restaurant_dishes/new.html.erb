@@ -1,0 +1,10 @@
+<%= form_tag "/restaurants/#{@restaurant.id}/dishes", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :spicy %>
+  <%= hidden_field_tag :spicy, false %>
+  <%= check_box_tag :spicy, true %><br>
+  <%= label_tag :taste %>
+  <%= text_field_tag :taste %><br>
+  <%= submit_tag 'Create Dish' %>
+<% end %>

@@ -16,6 +16,16 @@ Rails.application.routes.draw do
   patch '/restaurants/:id', to: 'restaurants#update'
   delete '/restaurants/:id', to: 'restaurants#destroy'
 
+  get '/dishes', to: 'dishes#index'
+  get '/dishes/:id', to: 'dishes#show'
+  get '/dishes/:id/edit', to: 'dishes#edit'
+  patch '/dishes/:id', to: 'dishes#update'
+  delete '/dishes/:id', to: 'dishes#destroy'
+
+  get '/restaurants/:id/dishes', to: 'restaurant_dishes#index'
+  get '/restaurants/:id/dishes/new', to: 'restaurant_dishes#new'
+  post '/restaurants/:id/dishes', to: 'restaurant_dishes#create'
+
   get '/shows', to: 'shows#index' 
   get '/networks/:id/shows', to: 'network_shows#index' 
   get 'shows/:id', to: 'shows#show' 
