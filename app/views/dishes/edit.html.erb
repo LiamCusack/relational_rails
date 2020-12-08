@@ -1,0 +1,10 @@
+<h1>Update Current Dish</h1>
+<%= form_tag "/dishes/#{@dish.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @dish.name %><br>
+  <%= label_tag :spicy %>
+  <%= text_field_tag :spicy, @dish.spicy %><br>
+  <%= label_tag :taste %>
+  <%= text_field_tag :taste, @dish.taste %><br>
+  <%= submit_tag 'Update Dish' %>
+<% end %>

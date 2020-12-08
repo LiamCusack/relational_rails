@@ -35,15 +35,15 @@ describe 'As a visitor' do
 
       fill_in "name", with: "Cosmo's"
       fill_in "date_opened", with: "2222-02-02 22:22:22"
-      fill_in "Style:", with: "Pizza"
+      fill_in "style", with: "Pizza"
 
       click_button("Update")
 
       visit "/restaurants/#{@fazoli.id}"
 
-      expect(page).to have_content("#{@fazoli.name}")
-      expect(page).to have_content("#{@fazoli.date_opened}")
-      expect(page).to have_content("#{@fazoli.style}")
+      expect(page).to have_content("Cosmo's")
+      expect(page).to have_content("2222-02-02 22:22:22")
+      expect(page).to have_content("Pizza")
 
     end
 

@@ -1,5 +1,7 @@
 <a href="/restaurant">Restaurant Index</a>
-
-<h1><%= @dish.name %></h1>
-<p><%= @dish.spicy %><br/>
-<%= @dish.taste %></p>
+<%= form_tag "/dishes" do %>
+<%= @dish.name %><br>
+<%= @dish.spicy %><br/>
+<%= @dish.taste %>
+<%= link_to "Update Dish", "/dishes/#{@dish.id}/edit"%>
+<% end %>

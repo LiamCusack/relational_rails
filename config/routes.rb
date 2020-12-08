@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   get '/dishes', to: 'dishes#index'
   get '/dishes/:id', to: 'dishes#show'
+  get '/dishes/:id/edit', to: 'dishes#edit'
+  patch '/dishes/:id', to: 'dishes#update'
+  
   get '/restaurants/:id/dishes', to: 'restaurant_dishes#index'
   get '/restaurants/:id/dishes/new', to: 'restaurant_dishes#new'
   post '/restaurants/:id/dishes', to: 'restaurant_dishes#create'

@@ -1,11 +1,10 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.all.order(date_opened: :desc)
   end
 
   def new
-
   end
 
   def create
@@ -29,9 +28,9 @@ class RestaurantsController < ApplicationController
     def update
       restaurant = Restaurant.find(params[:id])
       restaurant.update({
-                        name: params[:restaurant][:name],
-                        date_opened: params[:restaurant][:date_opened],
-                        style: params[:restaurant][:style]
+                        name: params[:name],
+                        date_opened: params[:date_opened],
+                        style: params[:style]
                         })
         restaurant.save
         redirect_to "/restaurants/#{restaurant.id}"

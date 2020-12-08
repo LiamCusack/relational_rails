@@ -27,9 +27,9 @@ class DishesController < ApplicationController
     def update
       dish = Dish.find(params[:id])
       dish.update({
-                        name: params[:dish][:name],
-                        spicy: params[:dish][:spicy],
-                        taste: params[:dish][:taste]
+                        name: params[:name],
+                        spicy: params[:spicy],
+                        taste: params[:taste]
                         })
         dish.save
         redirect_to "/dishes/#{dish.id}"

@@ -24,5 +24,28 @@ describe 'As a visitor' do
       expect(page).to have_content("false")
       expect(page).to have_content("Salty/Savory")
     end
+
+    it 'the visitor sees a link that lets them update a dish and then return to the dish id page' do
+
+      visit "/dishes/#{@pizza.id}"
+
+      expect(page).to have_link("Update Dish")
+
+      click_link("Update Dish")
+
+      visit "/dishes/#{@pizza.id}/edit"
+
+      fill_in "name", with: "Calzone"
+      fill_in "taste", with: "Calzoney"
+
+      click_button("Update Dish")
+
+      visit "/dishes/#{@pizza.id}"
+
+      expect(page).to have_content("Calzone")
+      expect(page).to have_content("false")
+      expect(page).to have_content("Calzoney")
+
+    end
   end
 end
