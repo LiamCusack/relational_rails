@@ -1,12 +1,10 @@
 <h1><%= @network.name %></h1>
-<p><%= @network.established %></p>
-<p><%= @network.num_of_shows %></p>
-
-<a href="/networks">Network Index</a>
-<br/>
-<a href="/networks/<%= @network.id %>/edit"> Update Network</a>
-<br/>
-<%= link_to 'Delete Network', "/networks/#{@network.id}", method: :delete %>
+<h5> Established: <%= @network.established %></h5>
+<h3><%= link_to 'List of Shows', "/networks/#{@network.id}/shows" %></h3><br/>
+<%= link_to 'Create Show', "/networks/#{@network.id}/shows/new" %><br/>
+<%= link_to 'Update Network', "/networks/#{@network.id}/edit" %><br/>
+<%= link_to 'Delete Network', "/networks/#{@network.id}", method: :delete %><br/>
+<%= link_to 'Back to Networks', "/networks" %>
 
 
 

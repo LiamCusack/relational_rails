@@ -14,8 +14,8 @@ class RestaurantsController < ApplicationController
                                 date_opened: params[:date_opened],
                                 style: params[:style]
                                 })
-      restaurant.save
-      redirect_to '/restaurants'
+    restaurant.save
+    redirect_to '/restaurants'
     end
 
     def show
@@ -33,8 +33,8 @@ class RestaurantsController < ApplicationController
                         date_opened: params[:date_opened],
                         style: params[:style]
                         })
-        restaurant.save
-        redirect_to "/restaurants/#{restaurant.id}"
+      restaurant.save
+      redirect_to "/restaurants/#{restaurant.id}"
     end
 
     def destroy

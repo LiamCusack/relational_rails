@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_12_05_051128) do
   create_table "networks", force: :cascade do |t|
     t.string "name"
     t.datetime "established"
-    t.integer "num_of_shows"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -42,11 +41,12 @@ ActiveRecord::Schema.define(version: 2020_12_05_051128) do
 
   create_table "shows", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer "network_id"
     t.boolean "daytime_show"
+    t.bigint "network_id"
+    t.integer "num_of_seasons"
+    t.index ["network_id"], name: "index_shows_on_network_id"
   end
 
   add_foreign_key "dishes", "restaurants"
+  add_foreign_key "shows", "networks"
 end

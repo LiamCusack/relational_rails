@@ -1,0 +1,22 @@
+<h1>All Shows</h1>
+
+<%= @trues %>
+<%= @falses %>
+
+<% @trues = @shows.each do |show| %>
+  <% if show.daytime_show == true %>
+      <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
+      <p>Daytime Show:<%= show.daytime_show %></p>
+      <p>Number of Seasons:<%= show.num_of_seasons %></p>
+  <% end %>
+<% end %>
+
+<% @falses = @shows.each do |show| %>
+  <% if show.daytime_show == false %>
+      <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
+      <p>Daytime Show:<%= show.daytime_show %></p>
+      <p>Number of Seasons:<%= show.num_of_seasons %></p>
+  <% end %>
+<% end %>
+
+

@@ -1,0 +1,10 @@
+<%= form_tag "/shows/#{@show.id}", method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @show.name %><br>
+  <%= label_tag :num_of_seasons, "Number of Seasons:" %>
+  <%= text_field_tag :num_of_seasons, @show.num_of_seasons %><br>
+  <%= label_tag :daytime_show, "Daytime Show?" %>
+  <%= hidden_field_tag :daytime_show, false %>
+  <%= check_box_tag :daytime_show, true %><br>
+  <%= submit_tag 'Submit Update' %>
+<% end %>

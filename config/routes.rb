@@ -25,4 +25,13 @@ Rails.application.routes.draw do
   get '/restaurants/:id/dishes', to: 'restaurant_dishes#index'
   get '/restaurants/:id/dishes/new', to: 'restaurant_dishes#new'
   post '/restaurants/:id/dishes', to: 'restaurant_dishes#create'
+
+  get '/shows', to: 'shows#index' 
+  get '/networks/:id/shows', to: 'network_shows#index' 
+  get 'shows/:id', to: 'shows#show' 
+  get 'networks/:id/shows/new', to: 'network_shows#new'
+  post '/networks/:id/shows', to: 'network_shows#create' 
+  get '/shows/:id/edit', to: 'shows#edit' 
+  patch 'shows/:id', to: 'shows#update' 
+  delete '/shows/:id', to: 'shows#destroy' 
 end

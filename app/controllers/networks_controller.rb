@@ -1,17 +1,16 @@
 class NetworksController < ApplicationController
 
   def index
-    @networks = Network.all
+    @networks = Network.all.order(established: :desc)
   end
 
   def new
   end
 
   def create
-     network = Network.new({
-                            name: params[:network][:name],
-                            established: params[:network][:established],
-                            num_of_shows: params[:network][:num_of_shows]
+    network = Network.new({
+                            name: params[:name],
+                            established: params[:established]
                           })
     network.save
     redirect_to '/networks'
@@ -29,8 +28,7 @@ class NetworksController < ApplicationController
     network = Network.find(params[:id])
     network.update({
                     name: params[:name],
-                    established: params[:established],
-                    num_of_shows: params[:num_of_shows]
+                    established: params[:established]
                   })
     network.save
     redirect_to "/networks/#{network.id}"
