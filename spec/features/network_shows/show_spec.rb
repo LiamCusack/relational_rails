@@ -5,8 +5,7 @@ describe 'As a visitor' do
     before :each do
       @netflix = Network.create!({
                       name: 'Netflix',
-                      established: '1997-01-01 11:00:00',
-                      num_of_employees: 2
+                      established: '1997-01-01 11:00:00'
                   })
       @bojack_horseman = Show.create!({
                       name: 'Bojack Horseman',
@@ -23,8 +22,7 @@ describe 'As a visitor' do
                   })
       @cartoon_network = Network.create!({
                       name: 'Cartoon Network',
-                      established: '1992-10-01 11:00:00',
-                      num_of_employees: 1
+                      established: '1992-10-01 11:00:00'
                   })
       @ricky_and_morty = Show.create!({
                       name: 'Rick and Morty',
@@ -39,11 +37,6 @@ describe 'As a visitor' do
 
       expect(page).to have_content(@bojack_horseman.name)
       expect(page).to have_content(@bojack_horseman.daytime_show)
-
-      visit "/network_shows/#{@ricky_and_morty.id}"
-
-      expect(page).to have_content(@ricky_and_morty.name)
-      expect(page).to have_content(@ricky_and_morty.daytime_show)
     end
   end
 end

@@ -5,8 +5,7 @@ describe 'As a visitor' do
     before :each do
           @netflix = Network.create({
                           name: 'Netflix',
-                          established: '1997-01-01 11:00:00',
-                          num_of_employees: 3
+                          established: '1997-01-01 11:00:00'
                       })
           @bojack_horseman = Show.create!({
                           name: 'Bojack Horseman',
@@ -53,6 +52,12 @@ describe 'As a visitor' do
       expect(page).to_not have_content("#{@bojack_horseman.name}")
       expect(page).to_not have_content("#{@bojack_horseman.daytime_show}")
       expect(page).to_not have_content("#{@bojack_horseman.num_of_seasons}")
+    end
+
+    # User Story 14
+    it 'I see the records that have a `true` above/before the records that have a false' do
+      visit '/shows'
+          
     end
   end  
 end

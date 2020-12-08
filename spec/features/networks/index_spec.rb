@@ -5,13 +5,11 @@ describe 'As a visitor' do
     before :each do
       @netflix = Network.create({
                           name: 'Netflix',
-                          established: '1997-01-01 11:00:00',
-                          num_of_employees: 3
+                          established: '1997-01-01 11:00:00'
                       })
       @cartoon_network = Network.create({
                           name: 'Cartoon Network',
-                          established: '1992-01-01 01:00:00',
-                          num_of_employees: 4
+                          established: '1992-01-01 01:00:00'
                       })
     end
 
@@ -26,6 +24,14 @@ describe 'As a visitor' do
       visit '/networks'
       
       expect(page).to have_link('New Network')  
+    end
+
+    # User Story 12
+    it "I see the most recently created records in order by recency from top to bottom
+    I also see the DateTime(s) next to each of the records in a reasonably formatted manner" do
+      visit '/networks'
+      
+      expect(page).to have_content(@netflix.established) 
     end
   end  
 end

@@ -274,7 +274,7 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
@@ -294,8 +294,45 @@
           1,
           null
         ]
+      },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/controllers/network_shows_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/cydkyd/turing/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1607385344
+    "timestamp": 1607392504
   }
 }
