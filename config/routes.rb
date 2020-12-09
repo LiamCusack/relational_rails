@@ -17,21 +17,20 @@ Rails.application.routes.draw do
   delete '/restaurants/:id', to: 'restaurants#destroy'
 
   get '/dishes', to: 'dishes#index'
+  get '/restaurants/:id/dishes', to: 'restaurant_dishes#index', as: "restaurant_dishes"
   get '/dishes/:id', to: 'dishes#show'
+  get '/restaurants/:id/dishes/new', to: 'restaurant_dishes#new', as: "restaurant_dishes_new"
+  post '/restaurants/:id/dishes', to: 'restaurant_dishes#create'
   get '/dishes/:id/edit', to: 'dishes#edit'
   patch '/dishes/:id', to: 'dishes#update'
   delete '/dishes/:id', to: 'dishes#destroy'
 
-  get '/restaurants/:id/dishes', to: 'restaurant_dishes#index'
-  get '/restaurants/:id/dishes/new', to: 'restaurant_dishes#new'
-  post '/restaurants/:id/dishes', to: 'restaurant_dishes#create'
-
-  get '/shows', to: 'shows#index' 
-  get '/networks/:id/shows', to: 'network_shows#index' 
-  get 'shows/:id', to: 'shows#show' 
+  get '/shows', to: 'shows#index'
+  get '/networks/:id/shows', to: 'network_shows#index'
+  get 'shows/:id', to: 'shows#show'
   get 'networks/:id/shows/new', to: 'network_shows#new'
-  post '/networks/:id/shows', to: 'network_shows#create' 
-  get '/shows/:id/edit', to: 'shows#edit' 
-  patch 'shows/:id', to: 'shows#update' 
-  delete '/shows/:id', to: 'shows#destroy' 
+  post '/networks/:id/shows', to: 'network_shows#create'
+  get '/shows/:id/edit', to: 'shows#edit'
+  patch 'shows/:id', to: 'shows#update'
+  delete '/shows/:id', to: 'shows#destroy'
 end

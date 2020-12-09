@@ -5,6 +5,8 @@
 <a href="/">home</a>
 <br/>
 
-<% @dishes.each do |dish| %>
+<% @dishes.sort_by_spicy.each do |dish| %>
   <h3><a href="/dishes/<%= dish.id %>"><%= dish.name %></a></h3>
+  <h5><%= link_to "Update Dish", "/dishes/#{dish.id}/edit"%>
+  <%= link_to 'Delete Dish', "/dishes/#{dish.id}", method: :delete %><h5/>
 <% end %>

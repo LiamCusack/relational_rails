@@ -1,0 +1,4 @@
+<% @restaurants.sort_date_desc.each do |restaurant| %>
+  <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %> <% restaurant.dish_count %></a></h3>
+  <h3><%= restaurant.date_opened %><h3/>
+<% end %>

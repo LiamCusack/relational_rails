@@ -1,12 +1,18 @@
-<a href="/restaurants">Restaurant Index</a><br/>
 <h1>All Restaurants</h1>
 
 <a href="/">home</a>
 <br/>
+<%= link_to 'Sort by number of dishes', restaurants_path(sort: :count) %>
 
-<% @restaurants.each do |restaurant| %>
-  <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
+<% @restaurants.sort_by_date_desc.each do |restaurant| %>
+  <% if current_page?("/restaurants/#{params[:sort]}") %>
+    <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
+    <% else %>
+    <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> contains <%= restaurant.dishes.dish_count %> dishes</h3>
+    <% end %>
   <h3><%= restaurant.date_opened %><h3/>
+  <h5><%= link_to "Edit Restaurant", "/restaurants/#{restaurant.id}/edit" %>
+  <%= link_to "Delete Restaurant", "/restaurants/#{restaurant.id}", method: :delete %><h5/>
 <% end %>
 
 <a href="/restaurants/new">New Restaurant</a>

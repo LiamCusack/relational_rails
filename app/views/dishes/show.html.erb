@@ -1,8 +1,8 @@
-<a href="/restaurant">Restaurant Index</a>
-<%= form_tag "/dishes" do %>
-<%= @dish.name %><br>
-<%= @dish.spicy %><br/>
-<%= @dish.taste %>
+<br>
+<%= form_tag "/dishes" do %><br>
+<h1><%= @dish.name %><h1/>
+<h3>Is it spicy? <%= @dish.spicy %><br/>
+How does it taste? <%= @dish.taste %><br><br>
 <%= link_to "Update Dish", "/dishes/#{@dish.id}/edit"%>
 <%= link_to 'Delete Dish', "/dishes/#{@dish.id}", method: :delete %>
-<% end %>
+<% end %></h3>
