@@ -1,9 +1,15 @@
 <h1>Restaurant Dishes</h1>
-<% @restaurant.dishes.each do |dish| %>
-  <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/<%= dish.restaurant_id %>"><%= dish.name %></a></h3>
-  <p><h3>
-  Is this dish spicy? <%= dish.spicy %><br/>
-  Tastes <%= dish.taste %><h3/></p>
-<% end %>
-<h3>There are <%= Dish.dishes_count(@restaurant.id) %> total dishes<h3/>
+
+<%= link_to 'Sort dishes alphabetically', restaurant_dishes_path(@restaurant.id, sort: :true) %>
+
+  <% @dishes.each do |dish| %>
+    <h3><a href="/dishes/<%= dish.id %>"><%= dish.name %></a></h3>
+    <p><h3>
+    Is this dish spicy? <%= dish.spicy %><br/>
+    Tastes <%= dish.taste %><h3/></p>
+    <h5><%= link_to "Update Dish", "/dishes/#{dish.id}/edit"%>
+    <%= link_to 'Delete Dish', "/dishes/#{dish.id}", method: :delete %><h5/>
+  <% end %>
+
+<h3>There are <%= @restaurant.dishes.dish_count %> total dishes<h3/>
 <h3><a href="/restaurants/<%= @restaurant.id %>/dishes/new">Add Dish</a></h3>

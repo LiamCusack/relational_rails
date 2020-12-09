@@ -1,7 +1,12 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all.order(date_opened: :desc)
+    @restaurants = Restaurant.all
+    if params[:sort]
+      @restaurants = Restaurant.order_by_dishes
+    else
+      @restaurants = Restaurant.all
+    end
   end
 
 

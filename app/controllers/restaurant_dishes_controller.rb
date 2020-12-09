@@ -1,6 +1,11 @@
 class RestaurantDishesController < ApplicationController
   def index
     @restaurant = Restaurant.find(params[:id])
+    if params[:sort]
+      @dishes = @restaurant.dishes.order_alphabetically
+    else
+      @dishes = @restaurant.dishes
+    end
   end
 
   # def show

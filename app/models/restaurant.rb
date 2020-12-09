@@ -6,4 +6,7 @@ class Restaurant < ApplicationRecord
     order(date_opened: :desc)
   end
 
+  def self.order_by_dishes
+    select('restaurants.*, COUNT(*) AS count').joins(:dishes).group(:id).order(count: :desc)
+  end
 end

@@ -6,7 +6,11 @@ class Dish < ApplicationRecord
     order(spicy: :desc)
   end
 
-  def self.dishes_count(restaurant)
-    where(restaurant_id: restaurant).count
+  def self.dish_count
+    count
+  end
+
+  def self.order_alphabetically
+    order(:name)
   end
 end
