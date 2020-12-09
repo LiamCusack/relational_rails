@@ -1,6 +1,6 @@
 <h1><%= @restaurant.name %></h1>
-<p><%= @restaurant.date_opened %><br/>
-<%= @restaurant.style %></p>
+<p>Opened on <%= @restaurant.date_opened %><br/>
+Style: <%= @restaurant.style %></p>
 <a href="/restaurants/<%= @restaurant.id %>/dishes">Featured Dishes</a><br/>
 
 <a href="/restaurants/<%= @restaurant.id %>/edit">Update Restaurant</a>

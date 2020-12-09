@@ -10,6 +10,14 @@ class Dish < ApplicationRecord
     count
   end
 
+  def self.is_it_spicy(dish)
+    if dish.spicy == true
+      p "Yes"
+    else dish.spicy == false
+      p "No"
+    end
+  end
+
   def self.order_alphabetically
     order(:name)
   end
