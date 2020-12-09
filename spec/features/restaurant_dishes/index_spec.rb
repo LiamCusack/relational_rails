@@ -22,7 +22,7 @@ describe 'As a visitor' do
         visit "/restaurants/#{@fazoli.id}/dishes"
 
         expect(page).to have_content(@pizza.name)
-        expect(page).to have_content(@pizza.spicy)
+        expect(page).to have_content("No")
         expect(page).to have_content(@pizza.taste)
       end
     end
@@ -40,7 +40,7 @@ describe 'As a visitor' do
 
         visit "/restaurants/#{@fazoli.id}/dishes"
         expect(page).to have_content("Pie")
-        expect(page).to have_content("false")
+        expect(page).to have_content("No")
         expect(page).to have_content("sweet")
       end
     end

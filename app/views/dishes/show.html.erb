@@ -1,7 +1,7 @@
 <br>
 <%= form_tag "/dishes" do %><br>
 <h1><%= @dish.name %><h1/>
-<h3>Is it spicy? <%= @dish.spicy %><br/>
+<h3>Is it spicy? <%= Dish.is_it_spicy(@dish) %><br/>
 How does it taste? <%= @dish.taste %><br><br>
 <%= link_to "Update Dish", "/dishes/#{@dish.id}/edit"%>
 <%= link_to 'Delete Dish', "/dishes/#{@dish.id}", method: :delete %>
