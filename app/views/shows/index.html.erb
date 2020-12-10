@@ -1,22 +1,14 @@
 <h1>All Shows</h1>
+<%= link_to 'Home', root_path %>
 
-<%= @trues %>
-<%= @falses %>
-
-<% @trues = @shows.each do |show| %>
-  <% if show.daytime_show == true %>
-      <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
-      <p>Daytime Show:<%= show.daytime_show %></p>
-      <p>Number of Seasons:<%= show.num_of_seasons %></p>
-  <% end %>
+<% @shows.true_before_false.each do |show| %>
+  <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
+  <li>Daytime Show:<%= show.daytime_show %></li>
+  <li>Number of Seasons:<%= show.num_of_seasons %></li>
+  <h6><%= link_to "Update #{show.name}", "shows/#{show.id}/edit" %></h6>
+  <h6><%= link_to "Delete #{show.name}", "shows/#{show.id}/delete" %></h6>
 <% end %>
 
-<% @falses = @shows.each do |show| %>
-  <% if show.daytime_show == false %>
-      <h3><%= link_to "#{show.name}", "/shows/#{show.id}" %></h3>
-      <p>Daytime Show:<%= show.daytime_show %></p>
-      <p>Number of Seasons:<%= show.num_of_seasons %></p>
-  <% end %>
-<% end %>
+
 
 

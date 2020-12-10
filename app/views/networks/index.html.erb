@@ -1,7 +1,9 @@
 <h1>All Networks</h1>
-<% @networks.each do |network| %>
-  <h3><a href="/networks/<%= network.id %>"><%= network.name %></a></h3>
-  <h6>Established :<%= network.established %></h6>
-<% end %><br>
+
 <%= link_to 'Home', "/" %><br/>
 <%= link_to 'New Network', "/networks/new" %><br/>
+
+<% @networks.most_recent.each do |network| %>
+  <h3><a href="/networks/<%= network.id %>"><%= network.name %></a></h3>
+  <li>Established :<%= network.established %></li>
+<% end %><br>
