@@ -24,3 +24,6 @@ This was our first true venture into working with Rails, SQL, and Active Record 
 - rails s
 
 ## Bundle exec rspec to run tests
+
+![image](https://user-images.githubusercontent.com/46683560/101822739-0b842c80-3ae7-11eb-968a-1e8f06f128b8.png)
+
