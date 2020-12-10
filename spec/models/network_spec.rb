@@ -27,9 +27,4 @@ describe Network, type: :model do
                                     network_id: @netflix.id
                                   })
   end
-
-  it "Knows count of shows" do
-    
-    expect(@netflix.shows_count).to eq(2)
-  end
 end

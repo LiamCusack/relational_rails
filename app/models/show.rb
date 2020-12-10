@@ -10,4 +10,8 @@ class Show < ApplicationRecord
   def self.true_before_false
     order(daytime_show: :desc)
   end
+
+   def self.order_by_alpha
+    order(:name)
+  end
 end
