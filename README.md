@@ -18,7 +18,7 @@ This was our first true venture into working with Rails, SQL, and Active Record 
 # Database creation
 - rake db:{drop,create,migrate,seed}
 
-* Configuration
+# Configuration
 - bundle install
 - bundle update
 - rails s
