@@ -1,12 +1,12 @@
-<h1>Restaurant Dishes</h1>
+<h1><%= @restaurant.name %> Menu</h1>
 
 <%= link_to 'Sort dishes alphabetically', restaurant_dishes_path(@restaurant.id, sort: :true) %>
 
   <% @dishes.each do |dish| %>
     <h3><a href="/dishes/<%= dish.id %>"><%= dish.name %></a></h3>
     <p><h3>
-    Is this dish spicy? <%= dish.spicy %><br/>
-    Tastes <%= dish.taste %><h3/></p>
+    Is this dish spicy? <%= Dish.is_it_spicy(dish) %><br/>
+    Taste profile: <%= dish.taste %><h3/></p>
     <h5><%= link_to "Update Dish", "/dishes/#{dish.id}/edit"%>
     <%= link_to 'Delete Dish', "/dishes/#{dish.id}", method: :delete %><h5/>
   <% end %>

@@ -10,7 +10,7 @@
     <% else %>
     <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a> contains <%= restaurant.dishes.dish_count %> dishes</h3>
     <% end %>
-  <h3><%= restaurant.date_opened %><h3/>
+  <h3>Opened on <%= restaurant.date_opened %><h3/>
   <h5><%= link_to "Edit Restaurant", "/restaurants/#{restaurant.id}/edit" %>
   <%= link_to "Delete Restaurant", "/restaurants/#{restaurant.id}", method: :delete %><h5/>
 <% end %>

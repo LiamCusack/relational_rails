@@ -43,6 +43,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'orderly'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
@@ -60,7 +61,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
