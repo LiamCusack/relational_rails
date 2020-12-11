@@ -2,6 +2,6 @@
 <li> Daytime Show: <%= @show.daytime_show %></li>
 <li> Number of Seasons: <%= @show.num_of_seasons %></li><br>
 <%= link_to 'Update Show', "/shows/#{@show.id}/edit" %><br>
-<%= link_to 'Delete Show', "/shows/#{@show.id}", method: :delete %><br/>
+<%= link_to 'Delete Show', "/shows/#{@show.id}/delete", method: :delete %><br/>
 <%= link_to 'Back to Shows', "/shows" %>
 

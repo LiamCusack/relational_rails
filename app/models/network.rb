@@ -7,6 +7,6 @@ class Network < ApplicationRecord
   end
 
   def self.order_by_shows
-    select('networks.*, COUNT(*) AS count').joins(:shows).group(:id).order(count: :desc)
+    select('networks.*, COUNT(*) AS count').joins(:shows).group(:id).order(count: :asc)
   end
 end

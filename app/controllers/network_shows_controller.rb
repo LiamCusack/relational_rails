@@ -10,8 +10,8 @@ class NetworkShowsController < ApplicationController
   end
 
   def create
-    networks = Network.find(params[:id])
-    networks.shows.create!(show_params)
+    @networks = Network.find(params[:id])
+    @networks.shows.create!(show_params)
     redirect_to "/networks/#{networks.id}/shows"
   end
   

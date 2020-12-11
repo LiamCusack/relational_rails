@@ -55,9 +55,8 @@ describe 'As a visitor' do
       check "Daytime Show?"
       click_button 'Create Show'
 
-      visit "/networks/#{@netflix.id}/shows"
-
       expect(page).to have_content('Cannon Busters')
+      expect(current_path).to eq("/networks/#{@netflix.id}/shows")
     end
 
     # User Story 14

@@ -26,11 +26,12 @@ Rails.application.routes.draw do
   delete '/dishes/:id', to: 'dishes#destroy'
 
   get '/shows', to: 'shows#index'
-  get '/networks/:id/shows', to: 'network_shows#index'
   get 'shows/:id', to: 'shows#show'
-  get 'networks/:id/shows/new', to: 'network_shows#new'
-  post '/networks/:id/shows', to: 'network_shows#create'
   get '/shows/:id/edit', to: 'shows#edit'
   patch 'shows/:id', to: 'shows#update'
   delete '/shows/:id', to: 'shows#destroy'
+  
+  get '/networks/:id/shows', to: 'network_shows#index'
+  get 'networks/:id/shows/new', to: 'network_shows#new'
+  post '/networks/:id/shows', to: 'network_shows#create'
 end

@@ -42,4 +42,5 @@ ActiveRecord::Schema.define(version: 2020_12_08_005548) do
   end
 
   add_foreign_key "shows", "networks"
+  add_foreign_key "dishes", "restaurants"
 end
