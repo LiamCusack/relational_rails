@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello there and welcome to our relational rails project extravaganza for MOD 2: Electric Boogaloo
 
-Things you may want to cover:
+This was our first true venture into working with Rails, SQL, and Active Record to build and manipulate databases. Our goal was to utilize the principles of CRUD and MVC successfully while doing this.
 
-* Ruby version
+## Ruby version 2.5.3 Rails version 5.2.4.4
 
-* System dependencies
+## System Dependencies
+- gem "rspec-rails"
+- gem "capybara"
+- gem "launchy"
+- gem "simplecov"
+- gem "pry"
+- gem "shoulda-matchers"
+- gem "orderly"
 
-* Configuration
+## Database creation
+- rake db:{drop,create,migrate,seed}
 
-* Database creation
+## Configuration
+- bundle install
+- bundle update
+- rails s
 
-* Database initialization
+## Bundle exec rspec to run tests
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://user-images.githubusercontent.com/46683560/101822739-0b842c80-3ae7-11eb-968a-1e8f06f128b8.png)
